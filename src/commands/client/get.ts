@@ -9,7 +9,7 @@ export default class Client extends Command {
   static flags = {
     help: flags.help({char: 'h'}),
     // flag with a value (-i, --user_id=VALUE)
-    client_id: flags.string({char: 'i', description: 'Client ID'})
+    client_id: flags.string({char: 'i', description: 'Client ID', required: true})
   }
 
   //static args = [{name: 'file'}]
@@ -28,7 +28,7 @@ export default class Client extends Command {
       scope: 'read:users'
     });
 
-    auth0.clients.get({ client_id: CLIENT_ID }, function (err, client) {
+    auth0.clients.get({ client_id: CLIENT_ID }, function (err: any, client: any) {
       if (err) {
         //do a thing
       }

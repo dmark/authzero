@@ -9,7 +9,7 @@ export default class User extends Command {
   static flags = {
     help: flags.help({char: 'h'}),
     // flag with a value (-i, --user_id=VALUE)
-    user_id: flags.string({char: 'i', description: 'user_id of user'})
+    user_id: flags.string({char: 'i', description: 'user_id of user', required: true})
   }
 
   //static args = [{name: 'file'}]
@@ -28,7 +28,10 @@ export default class User extends Command {
       scope: 'read:users'
     });
 
-    auth0.users.get({ user_id: USER_ID }, function (err, user) {
+    auth0.users.get({ user_id: USER_ID }, function (err: any, user: any) {
+      if (err) {
+        // do a thing
+      }
       console.log(user);
     });
   }
