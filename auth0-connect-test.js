@@ -10,4 +10,10 @@ var auth0 = new ManagementClient({
     scope: 'read:users'
 });
 
-console.log(auth0);
+auth0.tenant.getSettings(function (err, settings) {
+    if (err) {
+        // do a thing
+    }
+
+    console.log(settings);
+});
