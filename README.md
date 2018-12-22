@@ -20,7 +20,7 @@ $ npm install -g authzero
 $ authzero COMMAND
 running command...
 $ authzero (-v|--version|version)
-authzero/0.0.0 darwin-x64 node-v11.4.0
+authzero/0.0.0 darwin-x64 node-v11.5.0
 $ authzero --help [COMMAND]
 USAGE
   $ authzero COMMAND
@@ -32,6 +32,7 @@ USAGE
 * [`authzero goodbye [FILE]`](#authzero-goodbye-file)
 * [`authzero hello [FILE]`](#authzero-hello-file)
 * [`authzero help [COMMAND]`](#authzero-help-command)
+* [`authzero user [FILE]`](#authzero-user-file)
 
 ## `authzero goodbye [FILE]`
 
@@ -85,4 +86,20 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.4/src/commands/help.ts)_
+
+## `authzero user [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ authzero user [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/user.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/user.ts)_
 <!-- commandsstop -->
