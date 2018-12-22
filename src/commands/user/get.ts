@@ -4,17 +4,16 @@ var dotenv = require('dotenv');
 var ManagementClient = require('auth0').ManagementClient;
 
 export default class User extends Command {
-  static description = 'describe the command here'
+  static description = 'Get profile for specificed user.'
 
   static flags = {
     help: flags.help({char: 'h'}),
     // flag with a value (-i, --user_id=VALUE)
-    user_id: flags.string({char: 'i', description: 'user_id of user'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
+    user_id: flags.string({char: 'i', description: 'user_id of user'})
   }
 
-  static args = [{name: 'file'}]
+  //static args = [{name: 'file'}]
+  static args = []
 
   async run() {
     const {args, flags} = this.parse(User)
