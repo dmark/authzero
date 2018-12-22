@@ -17,7 +17,7 @@ export default class User extends Command {
 
   async run() {
     const {args, flags} = this.parse(User)
-    const user_id = flags.user_id
+    const USER_ID = flags.user_id
     
     dotenv.load();
 
@@ -28,7 +28,7 @@ export default class User extends Command {
       scope: 'read:users'
     });
 
-    auth0.users.get( { id: user_id }, function (err, user) {
+    auth0.users.get({ user_id: USER_ID }, function (err, user) {
       console.log(user);
     });
   }
