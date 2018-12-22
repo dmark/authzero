@@ -8,7 +8,6 @@ export default class User extends Command {
 
   static flags = {
     help: flags.help({char: 'h'}),
-    // flag with a value (-i, --user_id=VALUE)
     user_id: flags.string({char: 'i', description: 'user_id of user', required: true})
   }
 
@@ -25,10 +24,11 @@ export default class User extends Command {
       domain: process.env.AUTH0_DOMAIN,
       clientId: process.env.AUTH0_CLIENT_ID,
       clientSecret: process.env.AUTH0_CLIENT_SECRET,
+      audience: 'https://' + process.env.AUTH0_DOMAIN + '/api/v2/',
       scope: 'read:users'
     });
 
-    auth0.users.get({ user_id: USER_ID }, function (err: any, user: any) {
+    auth0.users.get({ id: USER_ID }, function (err: any, user: any) {
       if (err) {
         // do a thing
       }
