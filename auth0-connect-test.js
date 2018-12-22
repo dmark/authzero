@@ -1,23 +1,13 @@
 var dotenv = require('dotenv');
-var request = require("request");
+var ManagementClient = require('auth0').ManagementClient;
 
 dotenv.load();
 
-var options = {
-    method: 'POST',
-    url: 'https://' + process.env.AUTH0_DOMAIN + '/oauth/token',
-    headers: { 'content-type': 'application/json' },
-    body: {
-        grant_type: 'client_credentials',
-        client_id: process.env.AUTH0_CLIENT_ID,
-        client_secret: process.env.AUTH0_CLIENT_SECRET,
-        audience: 'https://' + process.env.AUTH0_DOMAIN + '/api/v2/'
-    },
-    json: true
-};
+var auth0 = new ManagementClient({
+    domain: process.env.AUTH0_DOMAIN,
+    clientId: process.env.AUTH0_CLIENT_ID,
+    clientSecret: process.env.AUTH0_CLIENT_SECRET,
+    scope: 'read:users'
+});
 
-request(options, function (error, response, body) {
-    if (error) throw new Error(error);
-
-    console.log(body);
-})
+console.log(auth0);
