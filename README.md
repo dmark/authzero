@@ -1,7 +1,9 @@
 authzero
 ========
 
-Auth0 Command Line Interface
+A command line interface to the @Auth0 Management API. Currently covers only a small portion of the Management API, and read-only capabilities at the moment. The code is likely garbage (I am not a software engineer) but it works and I am actively working on improving my javascript / typescript / node skills.
+
+*WARNING*: This utility relies on the Client Credentials grant type. As such, it has access to whatever scopes you have assigned in Auth0. If you have assigned scopes that allow making changes to anything in your tenant, you can do some real damage with this utility (once change / update / patch features are added). Always check your `.env` file before working with the utility.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/authzero.svg)](https://npmjs.org/package/authzero)
@@ -45,8 +47,8 @@ USAGE
   $ authzero client:get
 
 OPTIONS
-  -h, --help                 show CLI help
-  -i, --client_id=client_id  (required) Client ID
+  -h, --help   show CLI help
+  -i, --id=id  (required) Client ID
 ```
 
 _See code: [src/commands/client/get.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/client/get.ts)_
@@ -60,8 +62,8 @@ USAGE
   $ authzero connection:get
 
 OPTIONS
-  -h, --help           show CLI help
-  -i, --cxn_id=cxn_id  (required) Connection ID
+  -h, --help   show CLI help
+  -i, --id=id  (required) Connection ID
 ```
 
 _See code: [src/commands/connection/get.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/connection/get.ts)_
@@ -121,8 +123,8 @@ USAGE
   $ authzero user:get
 
 OPTIONS
-  -h, --help             show CLI help
-  -i, --user_id=user_id  (required) user_id of user
+  -h, --help   show CLI help
+  -i, --id=id  (required) user_id of user
 ```
 
 _See code: [src/commands/user/get.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/user/get.ts)_
