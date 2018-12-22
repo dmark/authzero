@@ -9,6 +9,8 @@ node_modules
 
 .env*
 
+.DS_Store*
+
 # Default github gitignore for node
 
 # Logs
