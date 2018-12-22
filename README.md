@@ -29,46 +29,25 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`authzero goodbye [FILE]`](#authzero-goodbye-file)
-* [`authzero hello [FILE]`](#authzero-hello-file)
+* [`authzero client:get`](#authzero-clientget)
 * [`authzero help [COMMAND]`](#authzero-help-command)
-* [`authzero user [FILE]`](#authzero-user-file)
+* [`authzero tenant:get`](#authzero-tenantget)
+* [`authzero user:get`](#authzero-userget)
 
-## `authzero goodbye [FILE]`
+## `authzero client:get`
 
-describe the command here
-
-```
-USAGE
-  $ authzero goodbye [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-```
-
-_See code: [src/commands/goodbye.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/goodbye.ts)_
-
-## `authzero hello [FILE]`
-
-describe the command here
+Get client (application) settings.
 
 ```
 USAGE
-  $ authzero hello [FILE]
+  $ authzero client:get
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ authzero hello
-  hello world from ./src/hello.ts!
+  -h, --help                 show CLI help
+  -i, --client_id=client_id  (required) Client ID
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/hello.ts)_
+_See code: [src/commands/client/get.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/client/get.ts)_
 
 ## `authzero help [COMMAND]`
 
@@ -87,19 +66,32 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.4/src/commands/help.ts)_
 
-## `authzero user [FILE]`
+## `authzero tenant:get`
 
-describe the command here
+Get tenant settings.
 
 ```
 USAGE
-  $ authzero user [FILE]
+  $ authzero tenant:get
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help  show CLI help
 ```
 
-_See code: [src/commands/user.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/user.ts)_
+_See code: [src/commands/tenant/get.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/tenant/get.ts)_
+
+## `authzero user:get`
+
+Get profile for specificed user.
+
+```
+USAGE
+  $ authzero user:get
+
+OPTIONS
+  -h, --help             show CLI help
+  -i, --user_id=user_id  (required) user_id of user
+```
+
+_See code: [src/commands/user/get.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/user/get.ts)_
 <!-- commandsstop -->
