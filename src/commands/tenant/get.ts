@@ -25,7 +25,7 @@ export default class Tenant extends Command {
       scope: 'read:users'
     });
 
-    auth0.tenant.getSettings(function (err, settings) {
+    auth0.tenant.getSettings(function (err: any, settings: any) {
       if (err) {
         // do a thing
       }
