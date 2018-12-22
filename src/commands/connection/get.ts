@@ -8,7 +8,7 @@ export default class Connection extends Command {
 
   static flags = {
     help: flags.help({char: 'h'}),
-    cxn_id: flags.string({char: 'i', description: 'Connection ID', required: true})
+    id: flags.string({char: 'i', description: 'Connection ID', required: true})
   }
 
   //static args = [{name: 'file'}]
@@ -16,7 +16,7 @@ export default class Connection extends Command {
 
   async run() {
     const {args, flags} = this.parse(Connection)
-    const CXN_ID = flags.cxn_id
+    const ID = flags.id
     
     dotenv.load();
 
@@ -27,7 +27,7 @@ export default class Connection extends Command {
       scope: 'read:users'
     });
 
-    auth0.connections.get({ id: CXN_ID }, function (err: any, settings: any) {
+    auth0.connections.get({ id: ID }, function (err: any, settings: any) {
       if (err) {
         // do a thing
       }
