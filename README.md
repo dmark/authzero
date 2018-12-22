@@ -30,7 +30,9 @@ USAGE
 # Commands
 <!-- commands -->
 * [`authzero client:get`](#authzero-clientget)
+* [`authzero connection:get`](#authzero-connectionget)
 * [`authzero help [COMMAND]`](#authzero-help-command)
+* [`authzero rule:get`](#authzero-ruleget)
 * [`authzero tenant:get`](#authzero-tenantget)
 * [`authzero user:get`](#authzero-userget)
 
@@ -49,6 +51,21 @@ OPTIONS
 
 _See code: [src/commands/client/get.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/client/get.ts)_
 
+## `authzero connection:get`
+
+Get connection settings.
+
+```
+USAGE
+  $ authzero connection:get
+
+OPTIONS
+  -h, --help           show CLI help
+  -i, --cxn_id=cxn_id  (required) Connection ID
+```
+
+_See code: [src/commands/connection/get.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/connection/get.ts)_
+
 ## `authzero help [COMMAND]`
 
 display help for authzero
@@ -65,6 +82,21 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.4/src/commands/help.ts)_
+
+## `authzero rule:get`
+
+Get rule.
+
+```
+USAGE
+  $ authzero rule:get
+
+OPTIONS
+  -h, --help   show CLI help
+  -i, --id=id  (required) Rule ID
+```
+
+_See code: [src/commands/rule/get.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/rule/get.ts)_
 
 ## `authzero tenant:get`
 
