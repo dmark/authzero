@@ -29,8 +29,25 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`authzero goodbye [FILE]`](#authzero-goodbye-file)
 * [`authzero hello [FILE]`](#authzero-hello-file)
 * [`authzero help [COMMAND]`](#authzero-help-command)
+
+## `authzero goodbye [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ authzero goodbye [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/goodbye.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/goodbye.ts)_
 
 ## `authzero hello [FILE]`
 
