@@ -1,9 +1,9 @@
 authzero
 ========
 
-A command line interface to the @Auth0 Management API. Currently covers only a small portion of the Management API, and read-only capabilities at the moment. The code is likely garbage (I am not a software engineer) but it works and I am actively working on improving my javascript / typescript / node skills.
+A command line interface to the [Auth0](https://github.com/auth0) Management API, using [node.js](https://nodejs.org/en/), [oclif](https://oclif.io/), and [TypeScript](https://www.typescriptlang.org/index.html). Currently covers only a small portion of the read-only capabilities of the Management API. The code is likely garbage (I am not a software engineer and node / typescript / javascript is all new to me) but it works. The project could use an overhaul by someone who knows idiomatic node and typescript. Once the code is cleaned up a bit, we'll push it to NPM.
 
-*WARNING*: This utility relies on the Client Credentials grant type. As such, it has access to whatever scopes you have assigned in Auth0. If you have assigned scopes that allow making changes to anything in your tenant, you can do some real damage with this utility (once change / update / patch features are added). Always check your `.env` file before working with the utility.
+*WARNING*: This utility relies on the Client Credentials grant type. As such, it has access to whatever scopes you have assigned in Auth0. If you have assigned scopes that allow making changes to your tenant, you can do some real damage with this utility (once we start adding change / update / patch features). Always check your `.env` file before working with the utility and always exercise extreme caution when working with a production tenant.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/authzero.svg)](https://npmjs.org/package/authzero)
