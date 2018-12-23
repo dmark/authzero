@@ -123,8 +123,9 @@ USAGE
   $ authzero user:get
 
 OPTIONS
-  -h, --help   show CLI help
-  -i, --id=id  (required) user_id of user
+  -e, --email=email      email address of user
+  -h, --help             show CLI help
+  -i, --user_id=user_id  user_id of user
 ```
 
 _See code: [src/commands/user/get.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/user/get.ts)_
