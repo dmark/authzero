@@ -1,38 +1,37 @@
-import {Command, flags} from '@oclif/command'
-
-var dotenv = require('dotenv');
-var ManagementClient = require('auth0').ManagementClient;
+import { Command, flags } from '@oclif/command'
+import { connectToAuth0 } from "../../_auth0";
 
 export default class User extends Command {
-  static description = 'Get profile for specificed user.'
+  static description: string = 'Get profile for specificed user.'
 
   static flags = {
     help: flags.help({char: 'h'}),
-    id: flags.string({char: 'i', description: 'user_id of user', required: true})
+    user_id: flags.string({char: 'i', description: 'user_id of user', exclusive: ['username','email']}),
+    //username: flags.string({char: 'i', description: 'username of user', exclusive: ['user_id',email']}),
+    email: flags.string({char: 'e', description: 'email address of user', exclusive: ['user_id','username']})
   }
 
-  //static args = [{name: 'file'}]
-  static args = []
-
+  // what is this, what does it do, what are its associatedf semantics?
   async run() {
-    const {args, flags} = this.parse(User)
-    const ID = flags.id
+    const {flags} = this.parse(User)
     
-    dotenv.load();
+    // Does this belong here? Outside run()? Outside the class?
+    const auth0 = connectToAuth0()
 
-    var auth0 = new ManagementClient({
-      domain: process.env.AUTH0_DOMAIN,
-      clientId: process.env.AUTH0_CLIENT_ID,
-      clientSecret: process.env.AUTH0_CLIENT_SECRET,
-      audience: 'https://' + process.env.AUTH0_DOMAIN + '/api/v2/',
-      scope: 'read:users'
-    });
-
-    auth0.users.get({ id: ID }, function (err: any, user: any) {
-      if (err) {
-        // do a thing
-      }
-      console.log(user);
-    });
+    if (flags.user_id) {
+      auth0.users.get({ id: flags.user_id }, function (err: any, user: any) {
+        if (err) {
+          // do a thing
+        }
+        console.log(user);
+      });
+    } else if (flags.email) {
+      auth0.getUsersByEmail(flags.email, function (err: any, user: any) {
+        if (err) {
+          // do a thing
+        }
+        console.log(user);
+      });
+    }
   }
 }
