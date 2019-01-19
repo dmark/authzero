@@ -1,15 +1,47 @@
 authzero
 ========
 
-A command line interface to the [Auth0](https://github.com/auth0) Management API, using [node.js](https://nodejs.org/en/), [oclif](https://oclif.io/), and [TypeScript](https://www.typescriptlang.org/index.html). Currently covers only a small portion of the read-only capabilities of the Management API. The code is likely garbage (I am not a software engineer and node / typescript / javascript is all new to me) but it works. The project could use an overhaul by someone who knows idiomatic node and typescript. Once the code is cleaned up a bit, we'll push it to NPM.
+A command line interface to the [Auth0](https://github.com/auth0) [Management
+API](https://auth0.com/docs/api/management/v2), using [node.js](https://nodejs.org/en/), [oclif](https://oclif.io/), and
+[TypeScript](https://www.typescriptlang.org/index.html). Currently covers only
+a small portion of the read-only capabilities of the Management API.
 
-*WARNING*: This utility relies on the Client Credentials grant type. As such, it has access to whatever scopes you have assigned in Auth0. If you have assigned scopes that allow making changes to your tenant, you can do some real damage with this utility (once we start adding change / update / patch features). Always check your `.env` file before working with the utility and always exercise extreme caution when working with a production tenant.
+The code is likely garbage (I am not a software engineer and node / typescript
+/ javascript is all new to me) but it works. The project could use an overhaul
+by someone who knows idiomatic nodejs and typescript. Once the code is cleaned
+up a bit, maybe we'll push it to NPM.
+
+*WARNING*: This utility relies on the [Client Credentials exchange](https://auth0.com/docs/api-auth/tutorials/adoption/client-credentials) grant type to access your tenant's Management API. As such,
+it has access to whatever scopes you have assigned to the application in Auth0.
+If you have assigned scopes that allow making changes to your tenant, you can
+do some real damage with this utility (once we start adding change / update /
+patch features that is). YOU CAN BREAK ALL THE THINGS. Always check your `.env`
+file before working with the utility and always exercise extreme caution when
+working with a production tenant.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/authzero.svg)](https://npmjs.org/package/authzero)
 [![CircleCI](https://circleci.com/gh/dmark/authzero/tree/master.svg?style=shield)](https://circleci.com/gh/dmark/authzero/tree/master)
 [![Downloads/week](https://img.shields.io/npm/dw/authzero.svg)](https://npmjs.org/package/authzero)
 [![License](https://img.shields.io/npm/l/authzero.svg)](https://github.com/dmark/authzero/blob/master/package.json)
+
+## Setup
+
+TODO: This section needs more detail.
+
+Install node.js, oclif, typescript, and the node-auth0 library.
+
+Crate a [Machine-to-Machine](https://auth0.com/docs/applications/machine-to-machine) application in Auth0. Give
+your M2M application access to the Management API and assign approriate scopes (mostly read:* at the moment).
+
+Clone the repo.
+
+Create a `.env` file in root directory of the repo. You can use env.txt as a template.
+
+---
+To update the documentation below:
+
+    npx oclif-dev readme
 
 <!-- toc -->
 * [Usage](#usage)
