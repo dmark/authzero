@@ -1,6 +1,6 @@
 import {Command, flags} from '@oclif/command'
 
-import {connectToAuth0} from '../../_auth0'
+import {connectToAuth0} from '../../auth0-helpers'
 
 export default class User extends Command {
   static description = 'Get profile for specificed user.'
@@ -8,11 +8,11 @@ export default class User extends Command {
   static flags = {
     help: flags.help({char: 'h'}),
     user_id: flags.string({char: 'i', description: 'user_id of user', exclusive: ['username', 'email']}),
-    //username: flags.string({char: 'i', description: 'username of user', exclusive: ['user_id', 'email']}),
+    username: flags.string({char: 'u', description: 'username of user', exclusive: ['user_id', 'email']}),
     email: flags.string({char: 'e', description: 'email address of user', exclusive: ['user_id', 'username']})
   }
 
-  // what is this, what does it do, what are its associatedf semantics?
+  // what is this, what does it do, what are its associated semantics?
   async run() {
     const {flags} = this.parse(User)
 
@@ -33,6 +33,19 @@ export default class User extends Command {
         }
         console.log(user)
       })
+    } else if (flags.username) {
+      // Pagination settings.
+      const params = {
+        search_engine: 'v3',
+        per_page: 10,
+        page: 0,
+        q: 'username:' + flags.username
+      }
+
+      auth0.getUsers(params, function (err, users) {
+        console.log(users)
+      })
+
     }
   }
 }
