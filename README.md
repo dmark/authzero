@@ -22,7 +22,7 @@ $ npm install -g authzero
 $ authzero COMMAND
 running command...
 $ authzero (-v|--version|version)
-authzero/0.0.0 darwin-x64 node-v11.5.0
+authzero/0.0.0 darwin-x64 node-v11.6.0
 $ authzero --help [COMMAND]
 USAGE
   $ authzero COMMAND
@@ -36,6 +36,7 @@ USAGE
 * [`authzero help [COMMAND]`](#authzero-help-command)
 * [`authzero rule:get`](#authzero-ruleget)
 * [`authzero tenant:get`](#authzero-tenantget)
+* [`authzero user:add`](#authzero-useradd)
 * [`authzero user:get`](#authzero-userget)
 
 ## `authzero client:get`
@@ -114,6 +115,21 @@ OPTIONS
 
 _See code: [src/commands/tenant/get.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/tenant/get.ts)_
 
+## `authzero user:add`
+
+Create a new user.
+
+```
+USAGE
+  $ authzero user:add
+
+OPTIONS
+  -f, --profile=profile  profile for the new user in JSON format
+  -h, --help             show CLI help
+```
+
+_See code: [src/commands/user/add.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/user/add.ts)_
+
 ## `authzero user:get`
 
 Get profile for specificed user.
@@ -123,9 +139,10 @@ USAGE
   $ authzero user:get
 
 OPTIONS
-  -e, --email=email      email address of user
-  -h, --help             show CLI help
-  -i, --user_id=user_id  user_id of user
+  -e, --email=email        email address of user
+  -h, --help               show CLI help
+  -i, --user_id=user_id    user_id of user
+  -u, --username=username  username of user
 ```
 
 _See code: [src/commands/user/get.ts](https://github.com/dmark/authzero/blob/v0.0.0/src/commands/user/get.ts)_
