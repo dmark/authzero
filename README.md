@@ -1,6 +1,12 @@
 authzero
 ========
 
+[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
+[![Version](https://img.shields.io/npm/v/authzero.svg)](https://npmjs.org/package/authzero)
+[![CircleCI](https://circleci.com/gh/dmark/authzero/tree/master.svg?style=shield)](https://circleci.com/gh/dmark/authzero/tree/master)
+[![Downloads/week](https://img.shields.io/npm/dw/authzero.svg)](https://npmjs.org/package/authzero)
+[![License](https://img.shields.io/npm/l/authzero.svg)](https://github.com/dmark/authzero/blob/master/package.json)
+
 A command line interface to the [Auth0](https://github.com/auth0) [Management
 API](https://auth0.com/docs/api/management/v2), using [node.js](https://nodejs.org/en/), [oclif](https://oclif.io/), and
 [TypeScript](https://www.typescriptlang.org/index.html). Currently covers only
@@ -18,12 +24,6 @@ do some real damage with this utility (once we start adding change / update /
 patch features that is). YOU CAN BREAK ALL THE THINGS. Always check your `.env`
 file before working with the utility and always exercise extreme caution when
 working with a production tenant.
-
-[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/authzero.svg)](https://npmjs.org/package/authzero)
-[![CircleCI](https://circleci.com/gh/dmark/authzero/tree/master.svg?style=shield)](https://circleci.com/gh/dmark/authzero/tree/master)
-[![Downloads/week](https://img.shields.io/npm/dw/authzero.svg)](https://npmjs.org/package/authzero)
-[![License](https://img.shields.io/npm/l/authzero.svg)](https://github.com/dmark/authzero/blob/master/package.json)
 
 ## Setup
 
