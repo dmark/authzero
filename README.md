@@ -34,6 +34,8 @@ Install node.js, oclif, typescript, and the node-auth0 library.
 Crate a [Machine-to-Machine](https://auth0.com/docs/applications/machine-to-machine) application in Auth0. Give
 your M2M application access to the Management API and assign approriate scopes (mostly read:* at the moment).
 
+Possibly useful: [Using Machine to Machine (M2M) Authorization](https://auth0.com/blog/using-m2m-authorization/)
+
 Clone the repo.
 
 Create a `.env` file in root directory of the repo. You can use env.txt as a template.
