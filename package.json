@@ -9,7 +9,7 @@
   "bugs": "https://github.com/dmark/authzero/issues",
   "dependencies": {
     "@oclif/command": "^1.5.8",
-    "@oclif/config": "^1.10.3",
+    "@oclif/config": "^1.12.0",
     "@oclif/plugin-help": "^2.1.4",
     "@types/dotenv": "^6.1.0",
     "auth0": "^2.14.0",
@@ -21,17 +21,17 @@
     "@oclif/dev-cli": "^1.21.0",
     "@oclif/test": "^1.2.2",
     "@oclif/tslint": "^3.1.1",
-    "@types/auth0": "^2.9.7",
+    "@types/auth0": "^2.9.9",
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.5",
-    "@types/node": "^10.12.7",
+    "@types/node": "^10.12.18",
     "chai": "^4.2.0",
-    "globby": "^8.0.1",
+    "globby": "^8.0.2",
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
     "ts-node": "^7.0.1",
-    "tslint": "^5.12.0",
-    "typescript": "^3.2.2"
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.4"
   },
   "engines": {
     "node": ">=8.0.0"
