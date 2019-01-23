@@ -1,7 +1,11 @@
 Contributing
 ============
 
-Contributors are welcome! If you are new, or relatively new, to contributiting to a open source project, there are some relevant resources below. For the veterans, here are some relevent resources for you:
+**Working on your first Pull Request?** You can learn how from this *free* series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
+
+Contributors are welcome!
+
+If you are new, or relatively new, to contributiting to a open source project, there are some relevant resources below. For the veterans, here are some relevent resources for you:
 
 - [Code of Conduct](https://github.com/dmark/authzero/blob/master/CODE_OF_CONDUCT.md)
 - [Getting Started With Auth0](https://auth0.com/docs/getting-started)
