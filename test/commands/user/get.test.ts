@@ -4,8 +4,8 @@ describe('user:get', () => {
   test
     .stdout()
     .stderr()
-    .command(['authzero', 'user:get', '--user_id', '\'auth0|5be194e2c0408874f867caab\''])
-    .it('returns a user profile with user_id=\'auth0|5be194e2c0408874f867caab\'', output => {
-      expect(output.stdout).to.contain('user_id: \'auth0|5be194e2c0408874f867caab\'')
+    .command(['user:get', '--user_id', 'auth0|5c48cd4c32822876ee653536'])
+    .it('runs authzero user:get --user_id "auth0|5c48cd4c32822876ee653536"', ctx => {
+      expect(ctx.stdout).to.include({user_id: 'auth0|5c48cd4c32822876ee653536'})
     })
 })

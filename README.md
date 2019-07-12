@@ -1,5 +1,4 @@
-authzero
-========
+# authzero
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/authzero.svg)](https://npmjs.org/package/authzero)
@@ -32,7 +31,7 @@ TODO: This section needs more detail.
 
 Install node.js, oclif, typescript, and the node-auth0 library.
 
-Crate a [Machine-to-Machine](https://auth0.com/docs/applications/machine-to-machine) application in Auth0. Give
+Create a [Machine-to-Machine](https://auth0.com/docs/applications/machine-to-machine) application in Auth0. Give
 your M2M application access to the Management API and assign approriate scopes (mostly read:* at the moment).
 
 Possibly useful: [Using Machine to Machine (M2M) Authorization](https://auth0.com/blog/using-m2m-authorization/)
@@ -50,21 +49,21 @@ To update the documentation below:
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
-# Usage
+## Usage
 <!-- usage -->
 ```sh-session
 $ npm install -g authzero
 $ authzero COMMAND
 running command...
 $ authzero (-v|--version|version)
-authzero/0.0.0 darwin-x64 node-v12.4.0
+authzero/0.0.0 darwin-x64 node-v11.6.0
 $ authzero --help [COMMAND]
 USAGE
   $ authzero COMMAND
 ...
 ```
 <!-- usagestop -->
-# Commands
+## Commands
 <!-- commands -->
 * [`authzero client:get`](#authzero-clientget)
 * [`authzero connection:get`](#authzero-connectionget)
@@ -74,7 +73,7 @@ USAGE
 * [`authzero user:add`](#authzero-useradd)
 * [`authzero user:get`](#authzero-userget)
 
-## `authzero client:get`
+### `authzero client:get`
 
 Get client (application) settings.
 
@@ -119,7 +118,7 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.0/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.4/src/commands/help.ts)_
 
 ## `authzero rule:get`
 

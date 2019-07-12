@@ -42,7 +42,10 @@ export default class User extends Command {
         q: 'username:' + flags.username
       }
 
-      auth0.getUsers(params, function (err, users) {
+      auth0.getUsers(params, function (err: any, users: any) {
+        if (err) {
+          // do a thing
+        }
         console.log(users)
       })
 
