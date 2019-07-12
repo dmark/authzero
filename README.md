@@ -56,7 +56,7 @@ $ npm install -g authzero
 $ authzero COMMAND
 running command...
 $ authzero (-v|--version|version)
-authzero/0.0.0 darwin-x64 node-v11.6.0
+authzero/0.0.0 darwin-x64 node-v12.4.0
 $ authzero --help [COMMAND]
 USAGE
   $ authzero COMMAND
@@ -118,7 +118,7 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.4/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.0/src/commands/help.ts)_
 
 ## `authzero rule:get`
 
