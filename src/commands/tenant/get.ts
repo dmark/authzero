@@ -1,7 +1,6 @@
 import {Command, flags} from '@oclif/command'
 
-var dotenv = require('dotenv');
-var ManagementClient = require('auth0').ManagementClient;
+import {connectToAuth0} from '../../authzero-helpers'
 
 export default class Tenant extends Command {
   static description = 'Get tenant settings.'
@@ -16,14 +15,7 @@ export default class Tenant extends Command {
   async run() {
     const {args, flags} = this.parse(Tenant)
     
-    dotenv.load();
-
-    var auth0 = new ManagementClient({
-      domain: process.env.AUTH0_DOMAIN,
-      clientId: process.env.AUTH0_CLIENT_ID,
-      clientSecret: process.env.AUTH0_CLIENT_SECRET,
-      scope: 'read:users'
-    });
+    const auth0 = connectToAuth0()
 
     auth0.tenant.getSettings(function (err: any, settings: any) {
       if (err) {

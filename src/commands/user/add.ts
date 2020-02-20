@@ -1,6 +1,6 @@
 import {Command, flags} from '@oclif/command'
 
-import {connectToAuth0} from '../../auth0-helpers'
+import {connectToAuth0} from '../../authzero-helpers'
 
 let fs = require('fs');
 
